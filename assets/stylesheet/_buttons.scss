@@ -1,0 +1,113 @@
+// Button Main
+.button-animate {
+    position: relative;
+    display:flex;
+    align-items: center;
+    
+    
+    
+    .button-hover-effects {
+        position: relative;
+        background: transparent;
+        border:0.5px solid darkslategray;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 0.5rem 2rem;
+        color: $secondary;
+       
+    }
+    .button-hover-effects:before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0;
+        height: 0;
+        background: transparent;
+        border: 1.5px solid transparent;
+    }
+    .button-hover-effects:hover:before {
+        animation: animate 1s linear forwards;
+        
+    }
+    
+    .button-hover-effects:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0;
+        height: 0;
+        background: transparent;
+        border: 1.5px solid transparent;
+    }
+    .button-hover-effects:hover:after {
+        animation: animate2 1s linear forwards;
+        
+        
+    }
+
+
+   
+   
+    
+    
+    }
+    
+
+    
+// Animate - Top and Right Borders
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: $secondary;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: $secondary;
+        border-right-color: $secondary;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: $secondary;
+        border-right-color: $secondary;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+//Animate2 - Top and Right Borders
+@keyframes animate2 {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: $secondary;
+    }
+    50% {
+        width: 0;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: $secondary;
+        border-left-color: $secondary;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: $secondary;
+        border-left-color: $secondary;
+    }
+} 

@@ -1,0 +1,92 @@
+.home-counter-section{
+    padding: 5em 0 5rem;
+    font-size: 16px;
+    .counter-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 5rem;
+        .counter-left{
+            grid-column: 1 / span 1;
+            background: url("../media/general/counterback.jpg");
+            background-size: cover;
+            position: relative;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+        .counter-left-inner{
+            width: 96%;
+            height: 94%;
+            background: $primary;
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            
+
+        }
+        .counter-inner-item{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .count{
+            font-size: 2.4rem;
+            margin-bottom: 0;
+            font-weight: 700;
+         
+        }
+        .counter-right{
+            grid-column: 2 / span 1;
+            padding-right: 2em;
+        }
+        h2{
+            font-size: 2.4rem;
+            width: 300px;
+            font-weight: bold;
+            text-align: left;
+            @media all and (max-width:545px){
+                font-size: 1.8rem;
+            }
+        }
+        .counter-right-content{
+            padding: 1em 0;
+            color: $text-grey;
+        }
+    }
+    @media all and (max-width:1200px){
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    @media all and (max-width:745px){
+        .counter-container{
+            .counter-left{
+                grid-column: 1 / -1;
+                margin-bottom: 8rem;
+                font-size: 0.8rem;
+            }
+          
+            .counter-right{
+                grid-column: 1 / -1;
+               
+                padding-right: 0;
+            }
+            .counter-title{
+                width: 100%;
+                text-align: center;
+                
+             } 
+           
+           
+        }
+        .counter-left-inner{
+            font-size: 0.8rem;
+        }
+    }
+    @media all and (max-width:545px){
+       .counter-right{
+            font-size: 1rem;
+            text-align: justify;
+       }
+    }
+}

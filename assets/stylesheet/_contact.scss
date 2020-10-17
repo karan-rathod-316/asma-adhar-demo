@@ -1,0 +1,254 @@
+.contact-page{
+  font-family: $font-family;
+  .contact-main{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+  
+  .contact-get-in-touch{
+    padding: 25rem 0 8rem;
+    grid-column: 1/-1;
+    justify-content: center;
+    text-align:center;
+    background: linear-gradient(rgba($secondary,0),rgba($secondary,0)), url("../media/general/get-in-touch-bg.jpg") 0 0 no-repeat;
+    background-size: cover;
+    height:75vh;
+    h4{
+      
+      position:absolute;
+      top:40%;
+      left:35%;
+      letter-spacing: 0.25rem;
+      color: transparent;
+      font-size:3.5rem;
+      z-index:1;
+  }
+  h4:before{
+    content:attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    color:$primary;
+    overflow: hidden;
+    border-right:1px solid transparent;
+    animation: type 2s steps(13) 1;
+    white-space: nowrap;
+  }
+  @keyframes type{
+    0%{
+      width:0;
+    }
+    25%{
+      width:25%;
+    }
+    50%{
+      width:50%;
+    }
+    75%{
+      width:75%;
+    }
+    100%{
+      width:100%;
+    }
+  }
+
+
+
+  }
+  .contact-info{
+    grid-column:1/-1;
+    display: flex;
+    padding:8rem;
+    justify-content: space-evenly;
+    text-align: center;
+   
+    img{
+      width:30px;
+      height:30px;
+      opacity:0.5;
+    }
+    h3{
+      font-size:1.2rem;
+      font-weight: 700;
+      margin: 0.8rem 0 0.6rem;
+    }
+    address,p{
+      color: $text-grey;
+      padding: 0 3rem;
+
+    }
+    
+    .loc,.phone,.mail{
+      width: 33%;
+      a{
+        color:$text-grey;
+      }
+    }
+  }
+  
+  .contact-text{
+    grid-column: 1/2 ;
+    padding:5rem;
+    padding-right: 0;
+    margin-left: 2rem;
+    margin-right:2rem;
+    
+    h3{
+      color:#bbc7c7;
+      font-size: 3rem;
+      
+    }
+    h4{
+      color:$secondary;
+      font-size:2rem;
+      margin:0 0 2rem;
+    }
+    p{
+      font-size:1.2rem;
+      font-weight:500;
+   
+      color:rgba(99, 110, 110, 0.9);
+      
+    }
+  }
+
+  
+  .contact-form{
+    grid-column:2/3;
+    padding:5%;
+    position: relative;
+    form{
+    
+      display:grid;
+    }
+    input{
+      border:0;
+      border-bottom:2px solid $text-grey;
+      border-bottom-left-radius: -3px;
+      margin : 1rem;
+      padding: 0.7rem;
+      outline: 0; 
+      width: 95%;
+      font-family: $font-family;
+     
+    }
+    textarea{
+      margin:1rem;
+      padding:0.8rem;
+      width:95%;
+      height: 8rem;
+      border:0;
+      border-bottom:2px solid $text-grey;
+      outline:none;
+      font-family: $font-family;
+    }
+    button{
+      margin:1rem;
+      padding:1rem 4rem;
+      background:transparent;
+      border:1px solid $text-grey;
+      justify-self: start;
+    }
+    .social-icon{
+      margin: 0;
+    }
+  }
+  
+  
+
+  .contact-careers{
+    padding: 6rem 0;
+    grid-column: 1/-1;
+    text-align: center;
+    p{
+      border-bottom:1px solid $text-grey;
+      display: inline-block;
+    }
+    a{
+      color:$text-grey;
+    }
+  }
+  .contact-map{
+    grid-column:1/-1;
+    iframe{
+      height:65vh;
+    }
+    
+  }
+   @media all and (max-width:1050px){
+     .contact-text{
+      padding-left: 0;
+      padding-top: 2rem;
+     }
+   }
+
+
+  @media screen and (max-width:768px){
+    .contact-main{
+      grid-column:1fr;
+    }
+    .contact-get-in-touch{
+      h4{
+         font-size: 2rem;
+      }
+    }
+    .contact-info{
+      flex-direction: column;
+      padding:2.5rem 0 1rem 0 ;
+      .loc,.phone,.mail{
+        width:100%;
+        margin-bottom:1.5rem;
+      }
+    }
+    .contact-address{
+      grid-column:1/-1;
+    }
+    .contact-text{
+      grid-column:1/-1;
+      margin-left: 3rem;
+    }
+    .contact-form{
+      grid-column:1/-1;
+      button{
+        padding: 0.5rem 1.5rem;
+      }
+    }
+  }
+
+ @media screen and (max-width:560px){
+   .contact-get-in-touch{
+     
+     h4{
+       font-size:1.8rem;
+       left: 50%;
+       transform: translateX(-50%);
+     }
+    }
+    .contact-careers{
+      p{
+        padding:0 1rem 2rem 1rem;
+        margin-bottom:2.5rem;
+      }
+    }
+    .contact-text{
+      // padding: 2rem 1rem 2rem 3rem  ;
+      margin-left: 2rem;
+      margin-right:2rem;
+      h3{
+        font-size: 2rem;
+      }
+      p{
+        font-size: 1.2rem;
+      }
+
+    }
+    .contact-form{
+      button{
+        padding: 0.7rem 3rem;
+      }
+    }
+  }
+
+}

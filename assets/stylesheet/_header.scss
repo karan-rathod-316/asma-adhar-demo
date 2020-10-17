@@ -1,0 +1,92 @@
+// Header Section
+.header-section{
+    background: transparent;
+    padding:1rem 0;
+    font-size: 1.1rem;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    .nav{
+        .logo{
+            letter-spacing: 0.2rem;
+            color: $primary;
+            align-items: center;
+            z-index: 100;
+            
+        }
+        .logo-img{
+            height: 60px;
+            width: 60px;
+            margin-right: 1rem;
+        }
+    }
+    .logo-text{
+        @media all and (max-width:545px){
+            font-size: 1.1rem;
+            letter-spacing: 0.05rem;
+        }
+    }
+    .toggle,.bars,.close{
+        display: none;
+        z-index: 100;
+    }
+    .nav-link{
+        color: $primary;
+        margin-left: 1.8rem;
+    } 
+    .active{
+        border-bottom: 2.5px solid orange;
+        padding-bottom: 5px;
+    }
+    @media all and (max-width:1200px){
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    @media all and (max-width:745px){
+        .nav-menu{
+            display: none;
+        }
+        .bars{
+            display: block;
+        }
+        .bars img{
+            width: 32px;
+            height: 32px;
+        }
+        .toggle:checked + .nav-menu{
+            display: block;
+            position: fixed;
+            left: 0;
+            top:0 ;
+            right: 0;
+            bottom: 0;
+            background: $secondary;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            li{
+                margin-bottom: 1rem;
+            }
+        }
+        .toggle:checked + .nav-menu .close{
+            display: block;
+        }
+        .nav-ul{
+            flex-direction: column;
+        }
+        .close{
+            position: absolute;
+            top: 14%;
+            right: 8%;
+            z-index: 1500;
+        }
+    }
+}
+
+.background-black{
+    background: $secondary;
+}

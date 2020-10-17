@@ -1,0 +1,171 @@
+// about hero
+.about-hero{
+    background: linear-gradient(rgba(black,0.5),rgba(black,0.5)),url("../media/team/group-photo.jpg")0 0 no-repeat;
+    height: 75vh;
+    background-size: cover;
+    background-position: 0 60%;
+    width: 100%;
+    color: $primary;
+    h1{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}
+.about-hero-container{
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100vh;
+    text-align: center;
+}
+
+// about us
+.about-description{
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    h1{
+        margin: 1.5rem 0;
+    }
+    p{
+        margin-bottom: 4rem;
+        padding: 0 1.5rem;
+        text-align: justify;
+        color: $text-grey;
+        letter-spacing: 1.2px;
+        line-height: 1.6;
+    }
+}
+
+// Services
+.services{
+    background: linear-gradient(rgba($secondary,0.3),rgba($secondary,0.3)),url("../media/team/02.jpg")0 0 no-repeat;
+    height: 400px;
+    background-position: 0 60%;
+   .space-between{
+       @media all and (max-width:1200px){
+        flex-wrap: wrap;
+       }
+   }
+   @media all and (max-width:1200px){
+    padding-left: 2em;
+    padding-right: 2em;
+   }
+}
+.services-item{
+    padding-top: 6.5rem;
+    h1{
+        // color: $primary;
+        font-weight: 700;
+
+    }
+    h2{
+        color: $primary;
+        font-weight: 300;
+    }
+    .service-subtitle{
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 3rem 0 2rem;
+    }
+}
+.services-list{
+    margin: 2rem 0;
+    height: 350px;
+    padding: 2rem;
+    width: 23%;
+    text-align: center;
+    background:white;
+    box-shadow: 0px 10px 20px grey;
+    h1{
+        font-weight: 700;
+        margin: 1.2rem 0;
+    }
+    img{
+        height: 50px;
+        
+        // width: 50px;
+    }
+    p{
+        color: $text-grey;
+    }
+    @media all and (max-width:1000px){
+        width: 48%;
+    }
+    @media all and (max-width:545px){
+        width: 100%;
+    }
+}
+
+.about-container{
+    .services{
+        margin-bottom: 24rem;
+        @media all and (max-width:1020px){
+            margin-bottom: 46rem;
+        }
+        @media all and (max-width:760px){
+            margin-bottom:98rem;
+        }
+    }
+    
+}
+// team member
+// .team{
+//     margin-top: 18rem;
+//     margin-bottom: 3rem;
+//     .team-member{
+//         text-align: center;
+//     }
+//     img{
+//         width: 28%;
+//         height: 350px;
+//         object-fit: cover;
+       
+//     }
+    
+//     @media all and (max-width:1050px){
+//         h1{
+//             padding-left: 2rem;
+//         }
+//     }
+// }
+// @media screen and (max-width:768px){
+// .team{
+//     margin-top:47rem;
+//     img{
+//         width: 100%;
+//         // height: auto;
+//         object-fit: cover;
+//     }
+//     .team-member{
+//         span{
+//             display: none;
+//         }
+//     }
+// }
+// }
+
+@media screen and (max-width:545px){
+    .about-hero{
+        background: linear-gradient(rgba($secondary,0.4),rgba($secondary,0.4)),url("../media/team/group-photo.jpg")0 0 no-repeat;
+        background-position: 33% 60%;
+        h1{
+            font-size: 2rem;
+        }
+    }
+    .about-description{
+        p{
+            padding: 0 2rem;
+        }
+    }
+    .team{
+        margin-top: 98rem;
+        padding: 0 2rem;
+        h1{
+            padding-left: 0;
+        }
+    
+    }
+
+}

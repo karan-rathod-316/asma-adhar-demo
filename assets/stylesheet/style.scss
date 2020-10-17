@@ -1,0 +1,27 @@
+@import "reset";
+@import "variables";
+@import "typography";
+@import "general";
+@import "header";
+@import "buttons";
+@import "home-call-us";
+// Home Page
+@import "home-counter-section";
+@import "home-projects-section";
+@import "home-testimonials-section";
+@import "home-hero-section";
+@import "home-contact-section";
+// Projects Page
+@import "project-main";
+// About Page
+@import "about";
+// Contact Page
+@import "contact";
+// Footer
+@import "footer";
+
+@media all and (max-width:1200px){
+    html{
+        font-size: 16px;
+    }
+}
